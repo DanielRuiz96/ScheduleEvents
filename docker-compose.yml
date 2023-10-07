@@ -1,0 +1,37 @@
+version: '3.6'
+services:
+  database:
+    image: 'postgres:latest'
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: a3sec
+      POSTGRES_DB: db_a3sec
+    networks:
+      - prueba
+
+  backend:
+    restart: always
+    depends_on:
+      - database
+    build: ./backend/.
+    ports:
+      - "5000:5000"
+    links:
+      - database:database
+    networks:
+      - prueba
+  
+  frontend:
+    restart: always
+    depends_on:
+      - database
+    build: ./frontend/app_a3sec/.
+    ports:
+      - "5173:5173"
+    networks:
+      - prueba
+networks:
+  prueba:
+    external: false
+
