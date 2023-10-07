@@ -69,7 +69,7 @@ La base de datos incluye un usuario "mock" (simulado) por defecto que puedes uti
 Puedes acceder a la aplicación utilizando las siguientes credenciales de usuario "mock":
 
 - **Usuario:** `Daniel96`
-- **Correo:** `Danirumo96@example.com`
+- **Correo:** `danirumo96@example.com`
 - **Contraseña:** `123456789`
 
 Estas credenciales son proporcionadas para simplificar el proceso de prueba y verificación. En un entorno de producción real, los usuarios reales deben registrarse y autenticarse con sus propias credenciales.
